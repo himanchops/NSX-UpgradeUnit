@@ -11,7 +11,7 @@ def GetResponse(url):
     response = requests.get(url, auth=('admin', 'Admin!23Admin'), verify=False)
     if response.status_code != 200:
             print("-----ERROR----")
-            exit(1)
+            exit()
     r = response.json()
     Page(r["results"])
     try:
